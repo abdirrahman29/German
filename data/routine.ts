@@ -1,17 +1,26 @@
-export type Entry = {
+export type Session = {
   id: string;
+  date: string;
+  original: string;
+  corrected: string;
   english: string;
-  german: string;
-  verb: string;
-  isSeparable: boolean;
-  objectGender?: 'der' | 'die' | 'das';
+  lessons: string[];
+  learnedWords: string[];
 };
 
-export const diaryData: Entry[] = [
-  { id: '1', english: "I wake up", german: "Ich wache auf", verb: "aufwachen", isSeparable: true },
-  { id: '2', english: "I eat breakfast", german: "Ich frühstücke", verb: "frühstücken", isSeparable: false },
-  { id: '3', english: "I go to work", german: "Ich gehe zur Arbeit", verb: "gehen", isSeparable: false },
-  { id: '4', english: "I work 5 hours", german: "Ich arbeite fünf Stunden", verb: "arbeiten", isSeparable: false },
-  { id: '5', english: "I take the bus", german: "Ich nehme den Bus", verb: "nehmen", isSeparable: false, objectGender: 'der' },
-  { id: '6', english: "I come back", german: "Ich komme zurück", verb: "zurückkommen", isSeparable: true },
+export const diaryData: Session[] = [
+  { 
+    id: '2026-03-26', 
+    date: 'Thursday, March 26, 2026',
+    english: "Today's Routine: Waking up, Praying, Sleeping, YouTube, Working, Breakfast, Creating German project.",
+    original: "heatre ich habe um 5 uhr auswachen dann ich bin gebate dann ich noch mal shlaft dann ich um 9 uhr auswachen dann ich habe youtube sehen dann ich habe freushtuk dann ich ein bissen arbiten", 
+    corrected: "Heute bin ich um 5 Uhr aufgewacht. Dann habe ich gebetet. Dann habe ich noch mal geschlafen. Dann bin ich um 9 Uhr aufgewacht. Dann habe ich YouTube gesehen. Dann habe ich gefrühstückt. Dann habe ich ein bisschen gearbeitet.", 
+    lessons: [
+      "Word Order (V2 Rule): The verb must be in 2nd position (Dann habe ich...)",
+      "Help Verb (sein vs haben): Movement verbs like 'aufwachen' use 'sein' (bin aufgewacht)",
+      "Past Participles: 'aufgewacht', 'gebetet', 'geschlafen', 'gesehen', 'gefrühstückt', 'gearbeitet'",
+      "Spelling: 'heute', 'ein bisschen'"
+    ],
+    learnedWords: ["heute", "aufgewacht", "gebetet", "geschlafen", "gesehen", "gefrühstückt", "ein bisschen", "gearbeitet"]
+  }
 ];

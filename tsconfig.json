@@ -1,6 +1,9 @@
 {
-  "extends": "expo/tsconfig.json",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "jsx": "react-jsx",
+    "lib": ["DOM", "ESNext"],
+    "moduleResolution": "node",
+    "skipLibCheck": true
   }
 }
